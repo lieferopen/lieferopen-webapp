@@ -1,0 +1,25 @@
+<!-- <div>
+    <pre>
+        {{ locations | json }}
+    </pre>
+</div> -->
+
+
+<div class="card-columns">
+
+    <a [routerLink]="['details', location._id]" class="card clickable" *ngFor="let location of locations">
+        <div class="card-img">
+            <img src="{{ location.image }}" *ngIf="location.image">
+        </div>
+        <div class="card-block">
+            <div class="card-title" style="display: flex; justify-content: space-between;">
+                <span>{{ location.name }}</span>
+                <clr-icon shape="star" class="is-warning" [ngClass]="{ 'is-solid': location.favorite }"></clr-icon>
+            </div>
+            <p class="card-text">
+                {{ location.description }}
+            </p>
+        </div>
+    </a>
+
+</div>
