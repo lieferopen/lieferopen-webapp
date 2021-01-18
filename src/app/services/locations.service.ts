@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class LocationsService {
 
-  private url = "http://localhost:3000/locations";
+  private url = "https://hub.lieferopen.com/locations";
 
   private locations: any[] = [];
 
