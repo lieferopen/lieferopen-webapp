@@ -8,6 +8,8 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationsComponent } from './components/locations/locations.component';
 import { LocationDetailsComponent } from './components/location-details/location-details.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { LocationDetailsComponent } from './components/location-details/location
     ClarityModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
